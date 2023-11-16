@@ -1,0 +1,29 @@
+
+
+/* 1. Seleccionamos el selector: de tag */
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2{
+    color: rgb(8, 148, 20);
+}
+
+main{
+    background: green;
+}
+
+
+/* 2. selección por clases */
+.tituloAmarillo{
+    color: yellow;
+}
+
+.tipografiaNueva{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Seleccionamos por id */
+#parrafoAzul{
+    color: blue;
+}
