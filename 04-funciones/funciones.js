@@ -90,8 +90,6 @@ const flecha = (saldo, compra) => {
 console.log(flecha(100000, 7500));
 
 
-
-
 //DOM
 let botonSaludo = document.getElementById('botonSaludo');
 
