@@ -24,6 +24,7 @@ const login = () => {
     }
 
     if(user == usuario && password == pass){
+        localStorage.setItem('Admin', JSON.stringify(usuario));
         location.href = 'admin.html';
     }else{
         location.href = 'error.html';
