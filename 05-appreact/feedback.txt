@@ -1,0 +1,17 @@
+
+1. Instalamos create-react-app de forma global
+
+    npm install -g create-react-app
+
+2. Ejecutamos la librería asignando el nombre del proyecto
+
+    create-react-app 05-appreact
+
+3. Eliminiar archivos innecesarios
+
+4. Creamos un folder de css y sumamos los archivos de .css
+
+5. Run de la app con:
+
+    npm start
+
