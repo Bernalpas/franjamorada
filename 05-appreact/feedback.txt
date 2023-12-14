@@ -15,3 +15,38 @@
 
     npm start
 
+
+    Rutas para componentes de React 
+
+1. Instalamos react-router-dom
+
+    npm i react-router-dom  //me instala la última versión
+
+    npm i react-router-dom@6.18.0 //me instala una versión específica para su uso
+
+2. Importamos el administrador de rutas en el index.js/main.jsx
+
+    import { BrowserRouter } from "react-router-dom";
+
+3. Agregamos el componente BrowserRouter en el index.js/main.jsx
+
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+
+4. Importamos los gestores de rutas de los componentes en el componente principal (App.js)
+
+    import { Routes, Route } from 'react-router-dom';
+
+5. Configuramos la ruta para la navegación
+
+        <Routes>
+            <Route path='/boton' element= { <Boton /> } />
+        </Routes>
+
+6. Importamos el Link para linkear los componentes
+
+    import { Link } from 'react-router-dom';
+
+
+

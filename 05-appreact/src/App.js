@@ -1,12 +1,14 @@
-import logo from './logo.svg';
+
 import './css/App.css'; //module - ES6
 import React from 'react';
 import Navegacion from './componentes/Navegacion';
 import Footer from './componentes/Footer/Footer'
 
-const saludar = () => {
-  alert('Saludos!!!');
-}
+//(4)
+import { Routes, Route } from 'react-router-dom';
+import Boton from './componentes/Boton';
+
+
 
 
 function App() {
@@ -18,48 +20,22 @@ function App() {
 
       <>
 
-    <Navegacion />
+        <Navegacion />
+
+        <h1 className='text-center mt-5 mb-5'>
+          Bienvenido al Componente Principal
+        </h1>
+
+        {/* 5 */}
+        <Routes>
+          <Route path='/boton' element= { <Boton /> } />
+        </Routes>
     
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-
-        <button onClick={ saludar }>
-          Saludar al Cliente
-        </button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          >
-          Learn React
-        </a>
-      </header>
-    </div>
-
-    <Footer />
+    
 
 
-    <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            Learn React
-          </a>
-        </header>
-      </div>
+
+        <Footer />
 
       </>
       
