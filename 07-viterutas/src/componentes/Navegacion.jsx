@@ -19,6 +19,9 @@ function Navegacion() {
                             <li className="nav-item">
                                 <Link to='/formulario' class="nav-link" >Formulario</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to='/personajes' class="nav-link" >Personajes</Link>
+                            </li>
                         </ul>
 
                         

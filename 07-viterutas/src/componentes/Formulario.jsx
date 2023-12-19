@@ -15,6 +15,10 @@ const Formulario = () => {
 
     const imprimirDatos = () =>{
         console.log(`Datos ingresados en el formulario. ${nombre} - ${apellido} - ${provincia}`)
+
+        //Mostrar datos al user
+        alert(`Datos ingresados en el formulario: ${nombre} - ${apellido} - ${provincia}`);
+
         setNombre('');
         setApellido('');
         setProvincia('');
@@ -51,7 +55,7 @@ const Formulario = () => {
                     <div className="mb-3">
                         <label className="form-label">Apellido: </label>
                         <input 
-                            type="email" 
+                            type="text" 
                             className="form-control"  
                             value = { apellido }
                             onChange={(e) => setApellido(e.target.value)}
@@ -59,9 +63,9 @@ const Formulario = () => {
                         />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Nombre: </label>
+                        <label className="form-label">Provincia: </label>
                         <input 
-                            type="email" 
+                            type="text" 
                             className="form-control" 
                             value = { provincia }
                             onChange={(e) => setProvincia(e.target.value)}
