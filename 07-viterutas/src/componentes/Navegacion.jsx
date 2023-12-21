@@ -1,5 +1,6 @@
 
 import { Link } from 'react-router-dom';
+import Cerrar from './Cerrar';
 
 function Navegacion() {
 
@@ -22,7 +23,19 @@ function Navegacion() {
                             <li className="nav-item">
                                 <Link to='/personajes' class="nav-link" >Personajes</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link to='/login' class="nav-link" >Login</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to='/admin' class="nav-link" >Admin</Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link to='/usuarios' class="nav-link" >Usuarios</Link>
+                            </li>
                         </ul>
+
+
+                        <Cerrar />
 
                         
                     </div>

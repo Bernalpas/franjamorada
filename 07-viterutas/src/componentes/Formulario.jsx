@@ -36,7 +36,7 @@ const Formulario = () => {
 
         <>
             <h1 className="text-center mt-5 mb-5">
-                Form de Login Admin
+                Form de Carga de Usuarios
             </h1>
 
             <div className="container">
@@ -44,7 +44,7 @@ const Formulario = () => {
                     <div className="mb-3">
                         <label className="form-label">Nombre: </label>
                         <input 
-                            type="email" 
+                            type="text" 
                             className="form-control" 
                             /* id="nombre" */ 
                             value = { nombre }
@@ -73,7 +73,7 @@ const Formulario = () => {
                         />
                     </div>
                     <div className="mb-3 text-center">
-                        <button onClick={ imprimirDatos } type="button" className="btn btn-success w-50">Login</button>
+                        <button onClick={ imprimirDatos } type="button" className="btn btn-success w-50">Cargar Usuarios</button>
                     </div>
                     <div className="mb-3 text-center">
                         <button onClick={ limpiarDatos } className="btn btn-danger w-75">Reset</button>

@@ -16,29 +16,20 @@ const Personajes = () => {
     },[]);
 
     const imprimirApi = () => {
-
         console.log(personaje);
-
     }
 
 
     return (
-
         <>
-
         <div className='personaje'>
-
             <h1 className="text-center mt-5 mb-5">
                 Personajes con useEffect
             </h1>
-
             <Button onClick={ imprimirApi }>
                 Imprimir Datos desde la Api
             </Button>
-
-
             <Tarjetas characters={ personaje } />
-
         </div>
         </>
     )
