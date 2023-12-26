@@ -1,6 +1,35 @@
 import Table from 'react-bootstrap/Table';
+import { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 function Usuarios() {
+
+    const [usuario, setUsuario] = useState('')
+    const [ datos, setDatos ] = useState([]);
+    const navigate = useNavigate();
+
+
+    useEffect(() => {
+
+        //verificamos si existe una sessión en la app
+        if(window.sessionStorage.getItem('usuario')){
+
+            //1. Setea o asigna la sesión del usuario
+            setUsuario(usuario);
+
+            //2. Leer los usuarios desde el localstorage
+            setDatos(JSON.parse(window.localStorage.getItem('datos')));
+
+            console.log(datos);
+
+        }else{
+            alert('Usuario no logueado');
+            navigate('*');
+        }
+
+    },[]);
+
+
     return (
 
         <>
@@ -17,24 +46,19 @@ function Usuarios() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+
+                {datos.map((u, index) => ( 
+
+                    <tr key={index}>
+                        <td>{ index + 1 }</td>
+                        <td>{ u.nombre }</td>
+                        <td>{ u.apellido }</td>
+                        <td>{ u.provincia }</td>
                     </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
+
+                ))}
+
+
                 </tbody>
             </Table>
         </>

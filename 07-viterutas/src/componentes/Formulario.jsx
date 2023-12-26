@@ -3,25 +3,49 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 const Formulario = () => {
-
-
     //js nativo
     //let nombre = document.getElementById('nombre').value;
 
     const [ nombre, setNombre ] = useState('');
     const [ apellido, setApellido ] = useState('');
     const [ provincia, setProvincia ] = useState('');
+    const [ datos, setDatos ] = useState([]);
 
 
     const imprimirDatos = () =>{
+
+
         console.log(`Datos ingresados en el formulario. ${nombre} - ${apellido} - ${provincia}`)
+
+
+        //A. Opción 1
+        //1. Creamos un objeto de tipo persona para guardar en el arreglo de datos
+/*         const persona = {
+            nombre: nombre,
+            apellido:apellido,
+            provincia: provincia
+        }  */
+
+        //2. Cargamos el objeto de tipo persona para guardar en el arreglo de datos
+        //setDatos([...datos, persona])
+        
+        //3. Gardamos el array de datos en el localstorage
+        //window.localStorage.setItem('datos', JSON.stringify(datos));
+
+
+        //B. Opción 2
+        //1. Cargamos el arreglo de objetos con los datos de la persona
+        setDatos([...datos, { nombre, apellido, provincia }])
+
+        //2. Cargamos el arreglo en el localstorage
+        setTimeout(() => {
+            window.localStorage.setItem('datos', JSON.stringify(datos));
+        }, 1000);
 
         //Mostrar datos al user
         alert(`Datos ingresados en el formulario: ${nombre} - ${apellido} - ${provincia}`);
 
-        setNombre('');
-        setApellido('');
-        setProvincia('');
+        limpiarDatos();
 
     }
 
